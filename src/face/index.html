@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>mediapipe demo</title>
+
+    <link rel="stylesheet" href="./main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.1/face_mesh.js" crossorigin="anonymous"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .input_video2 {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: absolute; left: 0px; right: 0px; top: 15px; text-align: center; font: 25px 微软雅黑; font-weight:bold;">
+        <p>这是一个mediapipe的例子</p>
+    </div>
+
+    <div class="album py-2 bg-light" style="position:relative; top: 60px;">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="500" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <foreignobject width="100%" height="100%">
+                                <video class="input_video2" autoplay muted playsinline="true"
+                                    crossorigin="anonymous"></video>
+                            </foreignobject>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="500" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <foreignobject width="100%" height="100%">
+                                <canvas class="output2" width="580" height="500"></canvas>
+                            </foreignobject>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div style="visibility: hidden;" class="control2"></div>
+
+    <script type="text/javascript" src="././faceMesh.js"></script>
+</body>
+
+</html>
